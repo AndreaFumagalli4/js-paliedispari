@@ -56,11 +56,12 @@ function getComputerRandomNumber (numMin, numMax){
 // 4.
 
 function isSumOddOrEven (numberSum){
+
     let even = false;
     if ( numberSum % 2 === 0 ) {
         even = true;
     }
-    return even;
+    return numberSum % 2 === 0;
 }
 
 const buttonTwo = document.getElementById('button-2');
@@ -81,10 +82,16 @@ buttonTwo.addEventListener('click', function() {
     let sumResult = isSumOddOrEven (sum);
     console.log(sumResult);
 
-    let quote = 'Il computer ha vinto';
+    let quote;
 
-    if ( sumResult ) {
-        quote = 'l\'utente ha vinto';
+    // SE quello che ha scritto l'utente è uguale a sumResult ==> ha vinto l'utente; se no ha vinto il computer.
+
+    if ( ( userChoice === 'pari' ) && ( sumResult === true ) ) {
+        quote = 'L\'utente ha vinto';
+    } else if ( ( userChoice === 'dispari' ) && ( sumResult === false ) ) {
+        quote = 'L\'utente ha vinto';
+    } else {
+        quote = 'Il computer ha vinto';
     }
 
     document.getElementById('output-2').innerHTML = quote;
