@@ -25,12 +25,9 @@ button.addEventListener('click', function() {
 
     let text = 'La parola è palindroma';
 
-    if (isPalindrome) {
-        
-    } else {
+    if ( ! isPalindrome) {
         text = 'La parola non è palindroma';
-    }
-
+    } 
     document.getElementById('output-1').innerHTML = text;
 });
 
