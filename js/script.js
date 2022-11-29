@@ -56,14 +56,9 @@ function getComputerRandomNumber (numMin, numMax){
 // 4.
 
 function isSumOddOrEven (numberSum){
+
+    ( numberSum % 2 === 0 ) ? 'pari' : 'dispari';
     
-    if ( numberSum % 2 === 0){
-        numberSum = 'pari';
-        console.log('La somma è pari');
-    } else {
-        numberSum = 'dispari';
-        console.log('La somma è dispari');
-    }
     return numberSum;
 }
 
