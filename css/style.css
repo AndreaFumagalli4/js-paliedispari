@@ -1,0 +1,28 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 2rem;
+}
+
+section#palidroma h1{
+    margin-bottom: 1rem;
+}
+
+section#palidroma a {
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    background-color: magenta;
+    color: white;
+    border-radius: 20px;
+}
+
+section#palidroma p {
+    margin-top: 1rem;
+}
+
