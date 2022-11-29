@@ -40,3 +40,7 @@ section#odd-even div{
 section#odd-even a{
     background-color: orange;
 }
+
+section#odd-even p{
+    margin-top: 1rem;
+}

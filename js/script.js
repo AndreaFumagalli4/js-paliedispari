@@ -61,21 +61,38 @@ function getComputerRandomNumber (numMin, numMax){
 function isSumOddOrEven (numberSum){
     
     if ( numberSum % 2 === 0){
-        console.log('la somma è pari');
+        numberSum = 'pari';
+        console.log('La somma è pari');
+    } else {
+        numberSum = 'dispari';
+        console.log('La somma è dispari');
     }
-    console.log('la somma è dispari');
-
     return numberSum;
 }
 
 const buttonTwo = document.getElementById('button-2');
 
-buttonTwo.addEventListener('click', function(){
+buttonTwo.addEventListener('click', function() {
 
     let userChoice = document.getElementById('odd-or-even').value;
 
     let userNumber = parseInt(document.getElementById('number').value, 10);
+    console.log('Numero scelto dall\'utente ' + userNumber);
 
+    let computerNumber = getComputerRandomNumber(1, 5);
+    console.log('Numero generato dal computer ' + computerNumber);
 
+    let sum = userNumber + computerNumber;
+    console.log('Somma dei due numeri ' + sum);
 
+    let sumResult = isSumOddOrEven (sum);
+    console.log(sumResult);
+
+    let quote = 'L\'utente ha vinto';
+    
+    if ( sumResult !== userChoice ) {
+        quote = 'Il computer ha vinto!';
+    } 
+
+    document.getElementById('output-2').innerHTML = quote;
 })
