@@ -82,17 +82,13 @@ buttonTwo.addEventListener('click', function() {
     let sumResult = isSumOddOrEven (sum);
     console.log(sumResult);
 
-    let quote;
-
-    // SE quello che ha scritto l'utente è uguale a sumResult ==> ha vinto l'utente; se no ha vinto il computer.
+    let quote = 'Il computer ha vinto';
 
     if ( ( userChoice === 'pari' ) && ( sumResult === true ) ) {
         quote = 'L\'utente ha vinto';
     } else if ( ( userChoice === 'dispari' ) && ( sumResult === false ) ) {
         quote = 'L\'utente ha vinto';
-    } else {
-        quote = 'Il computer ha vinto';
-    }
+    } 
 
     document.getElementById('output-2').innerHTML = quote;
 })
