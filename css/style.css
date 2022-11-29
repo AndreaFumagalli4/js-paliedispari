@@ -6,23 +6,37 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 section {
     padding: 2rem;
 }
 
-section#palidroma h1{
+h1{
     margin-bottom: 1rem;
 }
 
-section#palidroma a {
+a{
     text-decoration: none;
     padding: .5rem 1.5rem;
-    background-color: magenta;
     color: white;
     border-radius: 20px;
+}
+
+section#palidroma a{
+    background-color: magenta;
 }
 
 section#palidroma p {
     margin-top: 1rem;
 }
 
+section#odd-even div{
+    margin-bottom: 1rem;
+}
+
+section#odd-even a{
+    background-color: orange;
+}

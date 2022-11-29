@@ -13,7 +13,7 @@ function palindrome(str) {
     return true;
 }
 
-const button = document.getElementById('button');
+const button = document.getElementById('button-1');
 
 button.addEventListener('click', function() {
 
@@ -30,8 +30,51 @@ button.addEventListener('click', function() {
     } else {
         text = 'La parola non è palindroma';
     }
-    
+
     document.getElementById('output-1').innerHTML = text;
 });
 
 
+// Pari e Dispari
+// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+// Generiamo un numero random (sempre da 1 a 5) per il computer attraverso una funzione.
+// Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari attraverso un'altra funzione
+// Dichiariamo chi ha vinto.
+
+/**
+ * 1. Fare scegliere all'utente pari o dispari e fargli inserire un numero da 1 a 5;
+ * 2. Creare una funzione in cui si generi un numero random (QUESTO SARA` IL NUMERO SCELTO DAL COMPUTER);
+ * 3. Sommare i due numeri
+ * 4. Creare una funzione che stabilisca se la somma dei numeri sia pari o dispari
+ * 5. Stabiliamo chi ha vinto.
+ */
+
+// 2.
+
+function getComputerRandomNumber (numMin, numMax){
+    let randomNumber = Math.floor ( Math.random() * ( numMax - numMin + 1 ) + numMin );
+    return randomNumber;
+}
+
+// 4.
+
+function isSumOddOrEven (firstNum, secondNum){
+    let sum = firstNum + secondNum;
+
+    if ( sum % 2 === 0){
+        console.log('la somma è pari');
+    }
+    console.log('la somma è dispari');
+
+    return sum;
+}
+
+const buttonTwo = document.getElementById('button-2');
+
+buttonTwo.addEventListener('click', function(){
+
+    let userChoice = document.getElementById('odd-or-even').value;
+
+    let userNumber = parseInt (document.getElementById('number').value, 10);
+
+})
