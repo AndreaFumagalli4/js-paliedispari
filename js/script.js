@@ -58,15 +58,14 @@ function getComputerRandomNumber (numMin, numMax){
 
 // 4.
 
-function isSumOddOrEven (firstNum, secondNum){
-    let sum = firstNum + secondNum;
-
-    if ( sum % 2 === 0){
+function isSumOddOrEven (numberSum){
+    
+    if ( numberSum % 2 === 0){
         console.log('la somma è pari');
     }
     console.log('la somma è dispari');
 
-    return sum;
+    return numberSum;
 }
 
 const buttonTwo = document.getElementById('button-2');
@@ -75,6 +74,8 @@ buttonTwo.addEventListener('click', function(){
 
     let userChoice = document.getElementById('odd-or-even').value;
 
-    let userNumber = parseInt (document.getElementById('number').value, 10);
+    let userNumber = parseInt(document.getElementById('number').value, 10);
+
+
 
 })
